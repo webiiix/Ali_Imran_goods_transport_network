@@ -675,7 +675,9 @@ html {
   #title, 
   .hero, 
   .main-content {
-    margin-top: 120px; /* title height (50px) + nav height (70px) */
+    margin-top: 380px; /* title height (50px) + nav height (70px) */
+      opacity:0.15;
   }
 }
+
 
