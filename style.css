@@ -1,0 +1,680 @@
+
+header::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../image_file/truck.jpg") no-repeat center center/cover;
+   
+    z-index: -1;
+    opacity: 0.5;
+}
+*{
+     top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+body{
+    top: 0;
+    
+}
+.nav{
+    position: fixed;
+    /* top: 0;
+    left: 0;
+    width: 100%; */
+    border: 2px solid rgb(63, 57, 57);
+    background-color: rgb(63, 57, 57);
+    width: 100%;
+}
+
+ ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    list-style: none;
+    font-size: 20px;
+    
+    
+    
+}
+
+li a{
+    text-decoration: none;
+    /* border: 25px solid rgb(110, 107, 102); */
+    /* background-color: rgb(110, 107, 102); */
+    border-radius: 5px;
+    color: white;
+    border-style: none;
+    
+}
+.nav ul li a:hover{
+    /* background-color: rgb(110, 107, 102); */
+    /* color: rgb(235, 223, 223); */
+    text-decoration: underline;
+    color: gold;
+    /* stransition: 0.5s; */
+}
+
+.name{
+    position: fixed;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: rgb(63, 57, 57);
+      color: gold;
+      font-size: 22px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 1000;
+      padding: 10px 0;
+}
+
+.name span{
+      display: inline-block;
+      padding-right: 0%; /* start from outside screen */
+      animation: scroll-left 10s linear infinite; /* speed + infinite loop */
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);  /* start from right */
+      }
+      100% {
+        transform: translateX(100%); /* move to left */
+      }
+    }
+
+   #title {
+    display: flex;
+    justify-content: center; /* ✅ horizontally center */
+    align-items: center;     /* ✅ vertically center */
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #3f3939;
+    max-width: 550px;
+font-family: "DM Serif Text", serif;
+  font-weight: 200;
+    text-align: center; /* ✅ center text */
+    line-height: 1.5; /* optional: for better readability */
+    padding: 45px; /* optional: padding around the text */
+    background-color: rgba(255, 255, 255, 0.9); /* optional: semi-transparent background */
+    border-radius: 35px; /* optional: rounded corners */
+  font-style: italic;
+    margin: 140px auto;          /* ✅ block center */
+    height: 520px;           /* optional: height for vertical centering */
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;  /* centers the box with spacing */
+    padding: 30px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.9); /* light background */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* lift on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #3f3939; /* dark gray */
+    margin-bottom: 20px;
+    font-family: "DM Serif Text", serif;
+    border-bottom: 2px solid gold;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.box p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+    font-family: "Arial", sans-serif;
+}
+
+
+.services-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3f3939;
+    border-bottom: 3px solid gold;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-box h3 {
+    font-size: 22px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.team-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #222;
+    
+}
+
+.team-section p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.team-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 4px solid gold;
+}
+
+.team-card h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.team-card h4 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+.contact-section {
+    padding: 50px 20px;
+    background: #f8f9fa; /* light background */
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background: #f8f9fa; /* light background */
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #007bff; /* blue hover */
+}
+
+.contact-info i {
+    font-size: 22px;
+    color: #007bff;
+}
+
+
+.about-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    /* padding: 50px;
+    background: #f9f9f9;
+    text-align: center; */
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.about-box {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.about-box h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.about-box p, 
+.about-box ul {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-box ul li {
+    margin: 8px 0;
+}
+
+
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.auth-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-box form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.auth-box form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-box form button:hover {
+    background: #0056b3;
+}
+
+.auth-box p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-box p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Footer Styling */
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 50px 20px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.footer-box p, .footer-box ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+     flex-direction: column; /* ✅ vertical alignment */
+    gap: 5px; /* spacing between items */
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #007bff;
+}
+
+.social-links a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #aaa;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: 0.10s;
+}
+
+
+
+
+
+/* ✅ Keep your existing CSS above */
+
+/* 📱 RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 992px) {
+    ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    #title {
+        font-size: 16px;
+        padding: 30px;
+        height: auto;
+        margin: 100px auto;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .auth-box {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .name {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #title {
+        font-size: 14px;
+        padding: 20px;
+        margin: 80px auto;
+        height: auto;
+    }
+
+    .container {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; /* ✅ single column */
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+
+    .contact-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .about-section, .about-box {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .auth-section {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .auth-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* ✅ stack footer */
+        text-align: center;
+    }
+
+    .footer-box ul {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+
+
+
+/* Fix first page content under nav on mobile */
+@media (max-width: 600px) {
+  header {
+    position: fixed;   /* make sure nav stays on top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  /* Push first section down so it doesn’t hide under nav */
+  #title, 
+  .hero, 
+  .main-content {
+    margin-top: 80px;   /* adjust height according to your navbar */
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+
+/* 📱 Fix Title + Navbar Overlap on Mobile */
+@media (max-width: 600px) {
+  .name {
+    position: fixed;
+    top: 0;          /* title at very top */
+    width: 100%;
+    z-index: 1001;   /* keep it above nav */
+  }
+
+  .nav {
+    position: fixed;
+    top: 50px;       /* navbar just below title (adjust if needed) */
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Push content down so it's not hidden */
+  #title, 
+  .hero, 
+  .main-content {
+    margin-top: 120px; /* title height (50px) + nav height (70px) */
+  }
+}
