@@ -682,22 +682,23 @@ html {
 
 /* 🔹 Mobile view */
 @media (max-width: 768px) {
-  ul {
-    display: none; /* default hidden */
+  .nav ul {
+    display: none; /* hidden by default */
     flex-direction: row;
-    background: rgb(180, 69, 69);
+    background: rgb(63, 57, 57);
     width: 100%;
+    text-align: center;
   }
 
-  ul.show {
+  .nav ul.show {
     display: flex; /* show when button clicked */
   }
 
   .menu-btn {
-    display: block; /* show button only in mobile */
+    display: block; /* show button only on mobile */
   }
 }
-}
+
 
 
 
