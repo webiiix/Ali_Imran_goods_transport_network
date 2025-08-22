@@ -680,5 +680,25 @@ html {
   }
 }
 
+/* 🔹 Mobile view */
+@media (max-width: 768px) {
+  ul {
+    display: none; /* default hidden */
+    flex-direction: row;
+    background: rgb(180, 69, 69);
+    width: 100%;
+  }
+
+  ul.show {
+    display: flex; /* show when button clicked */
+  }
+
+  .menu-btn {
+    display: block; /* show button only in mobile */
+  }
+}
+}
+
+
 
 
