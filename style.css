@@ -75,6 +75,7 @@ li a{
       overflow: hidden;
       z-index: 1000;
       padding: 10px 0;
+    pointer-events: none; /* ✅ ADDED */
 }
 
 .name span{
@@ -700,6 +701,7 @@ html {
       
   }
 }
+
 
 
 
