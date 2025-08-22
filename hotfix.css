@@ -1,0 +1,33 @@
+
+/* ========== CLICK/TAP HOTFIX (paste this file after your main CSS) ========== */
+header::before { pointer-events: none !important; }
+
+/* Prevent the fixed title banner from blocking taps */
+.name { 
+  pointer-events: none !important; 
+  position: static !important;   /* or comment this line if you really need it fixed */
+}
+
+/* Make sure content is clickable */
+#title, .hero, .main-content { 
+  opacity: 1 !important; 
+  pointer-events: auto !important; 
+}
+
+/* Lift footer + contact above any overlays */
+.contact-section, .footer { 
+  position: relative !important; 
+  z-index: 9998 !important; 
+}
+.contact-info, .contact-info a, .social-links, .social-links a { 
+  position: relative !important; 
+  z-index: 9999 !important; 
+  pointer-events: auto !important; 
+}
+
+/* Mobile nav state (keeps hidden menu from covering screen when closed) */
+@media (max-width: 768px) {
+  .nav ul { display: none !important; }
+  .nav ul.show { display: flex !important; flex-direction: column; }
+  .menu-btn { display: block !important; }
+}
